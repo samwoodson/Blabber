@@ -12,6 +12,7 @@
 
 # Ignore node modules directory
 /node_modules
+npm-debug.log
 
 # Ignore webpack dev builds
 /public/bundle.js.map
