@@ -18,4 +18,5 @@ class TokensController < ApplicationController
       redirect_to ENV['ORIGIN']
     end
   end
+
 end
