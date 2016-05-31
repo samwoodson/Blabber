@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::API
   before_action :allow_cross_origin_requests, if: proc { Rails.env.development? }
 
+  def index
+    render file: 'public/index.html'
+  end
+
   def preflight
     render nothing: true
   end
@@ -26,5 +30,5 @@ class ApplicationController < ActionController::API
       render json: 'authentication failed', status: 401
     end
   end
-  
+
 end
