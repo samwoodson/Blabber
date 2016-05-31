@@ -17,10 +17,13 @@ ActiveRecord::Schema.define(version: 20160507040958) do
   enable_extension "plpgsql"
 
   create_table "blabs", force: :cascade do |t|
+    t.integer  "user_id"
     t.string   "content",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "blabs", ["user_id"], name: "index_blabs_on_user_id", using: :btree
 
   create_table "oauths", force: :cascade do |t|
     t.string "token",  null: false
